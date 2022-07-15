@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arlen Arguello</title>
+  <!-- -------- Materialize ------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+  <script src="https://kit.fontawesome.com/2922027bad.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="estilos.css">
+
+
+</head>
+
+<body>
+  <header class="header-mobile" id="inicio">
+    <img src="images/hamburguesa.svg" class="hamburguesa" />
+    <nav class="menu-navegacion">
+      <a href="index.html#inicio">Home</a>
+      <a href="index.html#solutions">Solutions</a>
+      <a href="index.html#about">About me</a>
+      <a href="#contacto">Contact</a>
+    </nav>
+    <div class="contenedor head">
+      <h1 class="titulo">UX Designer</h1>
+      <div class="wrap">
+        <ul class="dynamic-text">
+          <li><span>HTML5</span></li>
+          <li><span>CSS3</span></li>
+          <li><span>JAVASCRIPT</span></li>
+          <li><span>REACT</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+
+    <section class="main">
+
+
+      <!-- ---------LIGHT------------- -->
+
+      <div class="light">
+        <div class="bulb">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="switch">
+          <div class="btnSwitch"></div>
+        </div>
+      </div>
+
+      <!-- ----- Board----- -->
+
+      <div class="board">
+        <div class="frame frame-t"></div>
+        <div class="frame frame-r"></div>
+        <div class="frame frame-b"></div>
+        <div class="frame frame-l"></div>
+        <div class="content">
+          <h1>UX DESIGN</h1>
+
+          <ul>
+            <li>UX Design
+              <ul>
+                <li>Is the join between the human (users) with the technology</li>
+
+              </ul>
+            </li>
+            <li>Efective communication
+            </li>
+            <li>Accessibility</li>
+            <li>Solving problems</li>
+            <li>Creativity</li>
+            <li>Optimism</li>
+            <li>Usability</li>
+            <li>Simplicity</li>
+            <li>Consistency</li>
+            <li>User focused</li>
+            <li>Intuitiveness</li>
+            <li>Teamwork</li>
+            <li>Empathy</li>
+          </ul>
+        </div>
+      </div>
+      <!-- <button onClick="init()">Again</button> -->
+
+      <!--filters  -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+        <def>
+          <filter id="fVer" class="fFrame">
+            <feTurbulence type="fractalNoise" stitchTiles="stitch" />
+            <feColorMatrix />
+          </filter>
+          <filter id="fHor" class="fFrame">
+            <feTurbulence type="fractalNoise" stitchTiles="stitch" />
+            <feColorMatrix />
+          </filter>
+          <filter id="fWall">
+            <feTurbulence type="fractalNoise" result='noise' />
+            <feDiffuseLighting in='noise' lighting-color='#fff' result='light'>
+              <feDistantLight azimuth='45' />
+            </feDiffuseLighting>
+            <feBlend in="SourceGraphic" in2="noise" mode="multiply" />
+          </filter>
+        </def>
+      </svg>
+
+    </section>
+
+
+  </main>
+  <!-- -------------fotter---------- -->
+  <footer id="contacto">
+    <div class="contenedor footer-content">
+      <div class="contact-us">
+        <h2 class="brand">Arlen Arguello</h2>
+      </div>
+      <div class="social-media">
+        <p>Contact</p>
+        <a href="./" class="social-media-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="line"></div>
+
+  </footer>
+
+
+  <!-- --------------Scripts------------ -->
+
+  <script>
+    let btn = document.querySelector('.btnSwitch');
+    let main = document.querySelector('.main');
+    btn.onclick = function () {
+      main.classList.toggle('on');
+    }
+  </script>
+
+  <script src="./js/board.js"></script>
+
+  <!-- -----Materialize.js----------- -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- ------Main.js-------------------- -->
+  <script src="js/main.js"></script>
+
+  <!-- ------Menu-------------------- -->
+  <script src="js/menu.js"></script>
+
+  <!-- ------Animation Scroll-------------------- -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init()</script>
+
+
+</body>
+
+</html>
