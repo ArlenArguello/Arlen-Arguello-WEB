@@ -996,9 +996,8 @@ button {
   height: 100%;
   display:flex;
   justify-content: center;
-  background-image: url('/images/2.webp');
-  background-size: cover;
-  background-position: center;
+  background-image: no-repeat center/80% url('/images/2.webp');
+  
 
 }
 
