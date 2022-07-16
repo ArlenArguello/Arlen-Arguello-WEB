@@ -572,7 +572,7 @@ footer{
 .mobile-section{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background-image: url('./images/header-mobile.png');
   background-position: center;
   background-size: cover;
@@ -590,6 +590,7 @@ footer{
 
 }
 
+
 .screen {
   position:absolute;
   top: 20px;
@@ -599,31 +600,58 @@ footer{
   background: #000;
   border-radius: 20px;
   overflow: hidden;
+
+}
+
+.screen:first-child{
+  animation: screen1 15s infinite ease-in-out; 
+
+}
+@keyframes screen1 {
+  50%{
+    transform: translateX(-120%);
+  }
+  
+  75%{
+    
+  }
+  
+}
+.screen:nth-child(2){
+  animation: screen2 15s infinite ease-in-out; 
+
+}
+@keyframes screen2 {
+  50%{
+    transform: translateX(120%);
+  }
+  
+  75%{
+    
+  }
+  
 }
 
 
 
 .screen a{
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   background-image: url(./images/prueba.png);
-  animation: change 15s infinite ease-in-out;
+  animation: change 15s infinite ease-in-out; */
+}
+.screen a img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+
 }
 
-@keyframes change {
-  50%{
-    background-image: url('./images/NFT.png');
-  }
-  
-  75%{
-    background-image: url('./images/cripto1.png');
-  }
-  
-}
+
 /* _____________________________________________________________________ */
 
 /* -------------------------UX PAGE-------------------------- */
@@ -1002,7 +1030,8 @@ footer{
 
   }
   .contentUx p{
-    font-size: 130px;
+    font-size: 100px;
+    filter: drop-shadow(7px 7px 5px #000);
     
   }
   /* .phone{
@@ -1040,6 +1069,48 @@ display: flex;
     left: 5px;
     
   }
+   /* MOBILE */
+   .screen:first-child{
+    animation: screen1 15s infinite ease-in-out; 
   
- 
+  }
+  @keyframes screen1 {
+    25%{
+      transform: translateX(1%);
+    }
+    
+    
+    
+  }
+  
+  .screen:nth-child(2){
+    animation: screen2 20s infinite ease-in-out; 
+  
+  }
+  @keyframes screen2 {
+    50%{
+      transform: translateX(140%);
+    }
+    
+    75%{
+      transform: translateX(-1%);
+      
+    }
+    
+  }
+  .screen:nth-child(3){
+    animation: screen3 20s infinite ease-in-out; 
+  
+  }
+  @keyframes screen3 {
+    75%{
+      transform: translateX(280%);
+    }
+    100%{
+      transform: translateX(-1%);
+      
+    }
+    
+    
+  }
 }
