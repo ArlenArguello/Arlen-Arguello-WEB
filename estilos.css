@@ -631,6 +631,7 @@ footer{
 
 .main{
   margin-top: 100px;
+  
 }
 .light{
   display: flex;
@@ -643,6 +644,7 @@ footer{
 
 .main.on .light{
   min-height: 10vh;
+  margin-bottom: 50px;
 }
 
 
@@ -727,7 +729,7 @@ footer{
 
 .switch{
   position: absolute;
-  bottom: 50px;
+  bottom: 10px;
   right: 50px;
   width: 80px;
   height: 80px;
@@ -764,225 +766,48 @@ footer{
 
 }
 
-
-
-/* ------Board---- */
-
-
-.board {
+/* ux section */
+.contentUx {
   display: none;
-	/* min-height: 100vh; */
+  width: 90%;
+  height: 100vh;
+  
 
 }
+.main.on .contentUx{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+ height: 50%;
+  background: linear-gradient(180deg, #fff,  #E76509)  ;
 
-.main.on .board {
-	width: min(100%, 60rem);
-	margin-inline: auto;
-  margin-top: 50px;
-	display: grid;
-	--fw: 2rem;
-	grid-template-columns: var(--fw) 1fr var(--fw);
-	grid-template-rows: var(--fw) 1fr var(--fw);
-	background-color: rgb(0 0 0);
-	font-family: "Patrick Hand", cursive;
-	font-size: 1.1rem;
-	border-radius: calc(var(--fw) / 2);
-	box-shadow: 0 1rem 0.5rem rgb(0 0 0 / 0.5);
-	cursor: grab;
-	user-select: none;
 }
-.board h1 {
-	font-size: 3rem;
-	text-align: center;
+.contentUx img{
+  /* position: absolute; */
+  width: 100%;
 }
-/* frame set up */
-.board .frame-t {
-	--gr: 1/2;
-	--gc: 1/4;
-	--cp: 0 0, 100% 0, calc(100% - var(--fw)) 100%, var(--fw) 100%;
-	--bd: to bottom;
-}
-.board .frame-r {
-	--gr: 1/4;
-	--gc: 3/4;
-	--cp: 0 var(--fw), 100% 0, 100% 100%, 0 calc(100% - var(--fw));
-	--bd: to left;
-}
-.board .frame-b {
-	--gr: 3/4;
-	--gc: 1/4;
-	--cp: var(--fw) 0, calc(100% - var(--fw)) 0, 100% 100%, 0 100%;
-	--bd: to top;
-}
-.board .frame-l {
-	--gr: 1/4;
-	--gc: 1/2;
-	--cp: 0 0, 100% var(--fw), 100% calc(100% - var(--fw)), 0 100%;
-	--bd: to right;
-}
-/* frame */
-.board .frame {
-	grid-row: var(--gr);
-	grid-column: var(--gc);
-	clip-path: polygon(var(--cp));
-	position: relative;
-	border-radius: calc(var(--fw) / 2);
-	overflow: hidden;
-}
-/* frame-filter/shadow */
-.board .frame::before,
-.board .frame::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-}
-.board :where(.frame-t, .frame-b)::before {
-	filter: url("#fHor");
-}
-.board :where(.frame-l, .frame-r)::before {
-	filter: url("#fVer");
-}
-.board .frame::after {
-	background-image: linear-gradient(
-		var(--bd),
-		rgb(0 0 0 / 0.5),
-		rgb(255 255 255 / 0.25) 40%,
-		rgb(0 0 0 / 0) 50%,
-		rgb(255 255 255 / 0.25) 60%,
-		rgb(0 0 0 / 0.5)
-	);
-}
-.board .content {
-	--gr: 2/3;
-	--gc: 2/3;
-	background-image: url('./images/board1.png');
-	background-repeat: no-repeat;
-	background-size: cover;
-	/* background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.1)); */
-	color: rgb(20 20 20);
-	box-shadow: inset 0 0.25rem 0.5rem 0.125rem rgb(0 0 0 / 0.5);
-	padding: 2rem;
-	display: grid;
-	gap: 2rem;
-	animation: story 15s infinite ease-in-out;
-}
-@keyframes story {
-	25%{
-		background-image: url('./images/board2.png');
-	}
-	50%{
-		background-image: url('./images/board3.png');
-	}
-	100%{
-		background-image: url('./images/board4.png');
-	}
-}
+.contentUx p{
+  position: absolute;
+  font-family: 'Poppins';
+  color: #fff;
+  text-align: center;
+  font-size: 330px;
+  filter: drop-shadow(10px 10px 5px rgb(16, 16, 16));
+  animation: textAnimate  20s infinite;
 
+}
+@keyframes textAnimate {
+  20%{
+    transform: translateX(-10%)  ;
+    color: #40F7FB;
 
+  }
+  40%{
+    transform: translateY(-10%)  ;
+    color: #40F7FB;
 
-
-.board .content > ul {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-	gap: 0.5rem;
-}
-/* memo */
-.board .content > ul > li {
-	outline: 1px solid transparent;
-	position: relative;
-	width: 100%;
-	aspect-ratio: 1;
-	display: grid;
-	place-items: center;
-	text-align: center;
-	padding: 10%;
-	font-weight: bold;
-	background-color: var(--bc);
-	background-image: linear-gradient(
-			calc(180deg + var(--rd)),
-			rgb(0 0 0 / 0.2) 10%,
-			rgb(0 0 0 / 0) 90%,
-			rgb(255 255 255 / 0.25)
-		),
-		linear-gradient(rgb(0 0 0 / 0.1), rgb(0 0 0 /0.1));
-	background-size: 100% 100%, 100% 10%;
-	background-repeat: no-repeat;
-	transform-origin: top center;
-	transform-style: preserve-3d;
-	transform: rotate(var(--rd, 0deg));
-	transition: transform 125ms ease;
-}
-.board .content > ul > li:hover {
-	transform: rotate(var(--rd, 0deg)) rotateX(22.5deg);
-}
-.board .content > ul > li::before {
-	content: "";
-	position: absolute;
-	transform-origin: var(--to);
-	transform: rotate(calc(var(--rd) * -0.5)) translateZ(-1px);
-	inset: 0;
-	background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.125));
-	filter: blur(2px);
-	transition: transform 125ms ease;
-}
-.board .content > ul > li:hover::before {
-	transform: rotate(calc(var(--rd) * -0.5)) translateZ(-1px) rotateX(-10deg)
-		scaleY(1.05);
-}
-
-.board .content > ul > li > ul {
-	font-weight: normal;
-}
-
-button {
-	display: block;
-	margin-inline: auto;
-	margin-top: 1rem;
-	padding: 0.25rem 0.5rem;
-}
-
-/* memo drop */
-.board .content > ul > li.drop {
-	animation: dropAnimation 4s linear forwards;
-	z-index: 999;
-}
-.board .content > ul > li.drop::before {
-	opacity: 0.5;
-}
-
-@keyframes dropAnimation {
-	10% {
-		transform: rotate(var(--rd, 0deg)) rotateX(80deg);
-	}
-	20% {
-		transform: rotate(var(--rd, 0deg)) translateY(200px) rotateX(80deg)
-			rotateY(10deg);
-	}
-	32% {
-		transform: rotate(var(--rd, 0deg)) translateY(400px) rotateX(85deg)
-			rotateY(0deg);
-	}
-	46% {
-		transform: rotate(var(--rd, 0deg)) translateY(600px) rotateX(80deg)
-			rotateY(10deg);
-	}
-	52% {
-		transform: rotate(var(--rd, 0deg)) translateY(800px) rotateX(75deg)
-			rotateY(0deg);
-	}
-	68% {
-		transform: rotate(var(--rd, 0deg)) translateY(1000px) rotateX(80deg)
-			rotateY(-10deg);
-	}
-	80% {
-		transform: rotate(var(--rd, 0deg)) translateY(1200px) rotateX(85deg)
-			rotateY(0deg);
-	}
-	92%,
-	100% {
-		transform: rotate(var(--rd, 0deg)) translateY(1400px) rotateX(90deg)
-			rotateY(10deg);
-	}
+  }
 }
 
 
@@ -1014,8 +839,7 @@ button {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
-  padding-left: 50px;
-  
+  padding-left: 35px;
   justify-content: flex-start;
 }
 
@@ -1166,7 +990,22 @@ button {
   }
 
   /* ux page */
-  .phone{
+  .main.on .light{
+    margin-bottom: 10px;
+  }
+  .main.on .switch{
+    position: absolute;
+    top: 240px;
+  }
+  .main.on .contentUx{
+  height: 50vh;
+
+  }
+  .contentUx p{
+    font-size: 130px;
+    
+  }
+  /* .phone{
     position: relative;
     width: 195px;
     height: 400px;
@@ -1174,7 +1013,7 @@ button {
     border-radius: 40px;
 
   
-  }
+  } */
 
   /* ui page */
   .sliderUi{

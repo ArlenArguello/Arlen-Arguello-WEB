@@ -67,61 +67,11 @@
         </div>
       </div>
 
-      <!-- ----- Board----- -->
 
-      <div class="board">
-        <div class="frame frame-t"></div>
-        <div class="frame frame-r"></div>
-        <div class="frame frame-b"></div>
-        <div class="frame frame-l"></div>
-        <div class="content">
-          <h1>UX DESIGN</h1>
-
-          <ul>
-            <li>UX Design
-              <ul>
-                <li>Is the join between the human (users) with the technology</li>
-
-              </ul>
-            </li>
-            <li>Efective communication
-            </li>
-            <li>Accessibility</li>
-            <li>Solving problems</li>
-            <li>Creativity</li>
-            <li>Optimism</li>
-            <li>Usability</li>
-            <li>Simplicity</li>
-            <li>Consistency</li>
-            <li>User focused</li>
-            <li>Intuitiveness</li>
-            <li>Teamwork</li>
-            <li>Empathy</li>
-          </ul>
-        </div>
+      <div class="contentUx">
+        <img src="./images/uxBackground.png" alt="">
+        <p>UX</p>
       </div>
-      <!-- <button onClick="init()">Again</button> -->
-
-      <!--filters  -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
-        <def>
-          <filter id="fVer" class="fFrame">
-            <feTurbulence type="fractalNoise" stitchTiles="stitch" />
-            <feColorMatrix />
-          </filter>
-          <filter id="fHor" class="fFrame">
-            <feTurbulence type="fractalNoise" stitchTiles="stitch" />
-            <feColorMatrix />
-          </filter>
-          <filter id="fWall">
-            <feTurbulence type="fractalNoise" result='noise' />
-            <feDiffuseLighting in='noise' lighting-color='#fff' result='light'>
-              <feDistantLight azimuth='45' />
-            </feDiffuseLighting>
-            <feBlend in="SourceGraphic" in2="noise" mode="multiply" />
-          </filter>
-        </def>
-      </svg>
 
     </section>
 
@@ -155,20 +105,12 @@
     }
   </script>
 
-  <script src="./js/board.js"></script>
 
-  <!-- -----Materialize.js----------- -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <!-- ------Main.js-------------------- -->
-  <script src="js/main.js"></script>
 
   <!-- ------Menu-------------------- -->
   <script src="js/menu.js"></script>
 
-  <!-- ------Animation Scroll-------------------- -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init()</script>
+
 
 
 </body>
