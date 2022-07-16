@@ -1071,7 +1071,14 @@ display: flex;
   }
    /* MOBILE */
    .phone{
-   
+    
+      position: relative;
+      width: 206.5px;
+      height: 455px;
+      background: #000;
+      border-radius: 40px;
+    
+    
     overflow: hidden;
   
   }
