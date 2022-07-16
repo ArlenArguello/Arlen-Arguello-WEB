@@ -1070,6 +1070,11 @@ display: flex;
     
   }
    /* MOBILE */
+   .phone{
+   
+    overflow: hidden;
+  
+  }
    .screen:first-child{
     animation: screen1 15s infinite ease-in-out; 
   
