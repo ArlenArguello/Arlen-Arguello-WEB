@@ -955,6 +955,9 @@ footer{
 
 /* ---------------------MEDIA QUERYS ---------------------*/
 @media screen and (max-width:800px){
+  
+  
+  
   .menu-navegacion{
     width: 50vw;
   }
@@ -1100,6 +1103,10 @@ footer{
 
 
 @media screen and (max-width:600px){
+  .hamburguesa{
+    top: 100px;
+  }
+  
   .menu-navegacion{
     width: 50vw;
   }
