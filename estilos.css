@@ -313,16 +313,16 @@ body{
 
 .card .content{
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   padding: 20px;
   text-align: center;
-  padding-bottom: 15px;
+  /* padding-bottom: 35px; */
 
 }
 
 .card .content h2{
   color: #fff;
-  font-size: 50px;
+  font-size: 40px;
   font-family: 'Poppins';
   text-shadow: 5px 5px rgba(0, 0, 0, 0.2);;
 
@@ -332,7 +332,7 @@ body{
   background: #000;
   color: #fff;
   border-radius: 40px ;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .container a:nth-child(1) .card{
@@ -361,7 +361,7 @@ body{
 .about{
  display:grid;
  grid-template-columns: repeat(2, 2fr);
-  height: 100vh;
+  height: 80vh;
 }
 
 .leftSide{
@@ -393,9 +393,9 @@ body{
 .description p{
   color: #fff;
   letter-spacing: 2px;
-  line-height: 50px;
+  line-height: 40px;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 
@@ -603,7 +603,7 @@ footer{
 
 }
 
-.screen:first-child{
+/* .screen:first-child{
   animation: screen1 15s infinite ease-in-out; 
 
 }
@@ -630,7 +630,7 @@ footer{
     
   }
   
-}
+} */
 
 
 
@@ -832,9 +832,11 @@ footer{
 
 /* ________________________________________________________________________________________ */
 
-/* ---------------------------UI PAGE ------------------------------------------------------------ */
-
+/* ---------------------------UI SECTION ------------------------------------------------------------ */
 .sliderUi{
+  display: none;
+}
+.main.on .sliderUi{
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -850,16 +852,14 @@ footer{
   color: #fff;
 }
 
-.sliderUi .glass {
+ .sliderUi .glass {
   width: 90%;
-  background: rgba(255, 255, 255, .2);
-  backdrop-filter: blur(1px);
-  border: 1px solid rgba(255, 255, 255, .3);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  
   display: flex;
   align-items: center;
   padding-left: 35px;
   justify-content: flex-start;
+
 }
 
 .colors{
@@ -894,7 +894,7 @@ footer{
 }
 @keyframes color2 {
   20%{
-    transform: translateX(25%)  rotate(180deg);
+    transform:  rotate(180deg);
     background: #8D8D8D;
 
   }
@@ -907,7 +907,7 @@ footer{
 }
 @keyframes color3 {
   20%{
-    transform: translateX(50%)  rotate(180deg);
+    transform:   rotate(180deg);
   background: #EFEFEF;
     
   }
@@ -920,7 +920,7 @@ footer{
 }
 @keyframes color4 {
   20%{
-    transform: translateX(75%)  rotate(180deg);
+    transform:   rotate(180deg);
   }
 }
 
@@ -955,7 +955,7 @@ footer{
 
 /* ---------------------MEDIA QUERYS ---------------------*/
 
-@media screen and (max-width:900px){
+@media screen and (max-width:600px){
   .menu-navegacion{
     width: 50vw;
   }
@@ -976,8 +976,8 @@ footer{
 
   .about{
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr;
-  height: 100vh;
+    grid-template-rows: 2fr ;
+    height: 100vh;
   
 
 
@@ -986,8 +986,8 @@ footer{
     font-size: 40px;
    }
    .description p{
-    line-height: 35px;
-    font-size: 20px;
+    /* line-height: 18px; */
+    font-size: 14px;
 
    }
    
@@ -1016,12 +1016,15 @@ footer{
   }
 
   /* ux page */
+
+  
   .main.on .light{
     margin-bottom: 10px;
   }
   .main.on .switch{
     position: absolute;
     top: 240px;
+    right: 20px;
   }
   .main.on .contentUx{
   height: 50vh;
@@ -1043,17 +1046,30 @@ footer{
   } */
 
   /* ui page */
+
   .sliderUi{
-display: flex;
+    display: none;
+
+  }
+  .main.on .sliderUi{
+  display: flex;
   align-items: center;
   justify-content: center; 
+
   }
   
 
   .sliderUi .glass {
-  justify-content: center;
+    background: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, .3);
+    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); */
+    justify-content: center;
     height: 600px;
     padding-left: 0;
+    padding-bottom: 100px;
+    
+
   }
 
   .sliderUi figure img{
@@ -1061,10 +1077,9 @@ display: flex;
     height: 467px;
   }
   .colors{
-    display: flex;
     position: absolute;
     margin-top:  600px;
-    left: 5px;
+    /* left: 0px; */
     
   }
    /* MOBILE */
@@ -1080,7 +1095,7 @@ display: flex;
     overflow: hidden;
   
   }
-   .screen:first-child{
+   /* .screen:first-child{
     animation: screen1 15s infinite ease-in-out; 
   
   }
@@ -1122,5 +1137,154 @@ display: flex;
     }
     
     
-  }
+  } */
 }
+
+
+
+  
+
+@media screen and (max-width:800px){
+  .menu-navegacion{
+    width: 50vw;
+  }
+  .titulo{
+    font-size: 25px;
+  }
+  
+  
+  .dynamic-text li{
+   
+    /* font-weight:500 ; */
+    font-size: 20px;
+  }
+
+  .dynamic-text li::after{
+    border: none;
+  }
+
+  .about{
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    height: 100vh;
+
+
+   }
+   
+   .about h2{
+    font-size: 40px;
+   }
+   .description p{
+    line-height: 25px;
+    font-size: 16px;
+
+   }
+   
+  .footer-content{
+    justify-content: center;
+  }
+  .social-media{
+    width: 80%;
+    justify-content: space-evenly;
+  }
+  .social-media i{
+    margin-left: 0;
+  }
+ 
+
+  .contact-us{
+    text-align: center;
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
+
+  /* web-page */
+  .container-web {
+    height: 100%;
+  }
+
+  /* ux page */
+
+  
+  .main.on .light{
+    margin-bottom: 10px;
+  }
+  .main.on .switch{
+    position: absolute;
+    top: 240px;
+    right: 20px;
+  }
+  .main.on .contentUx{
+  height: 50vh;
+
+  }
+  .contentUx p{
+    font-size: 100px;
+    filter: drop-shadow(7px 7px 5px #000);
+    
+  }
+  /* .phone{
+    position: relative;
+    width: 195px;
+    height: 400px;
+    background: #000;
+    border-radius: 40px;
+
+  
+  } */
+
+  /* ui page */
+
+  .sliderUi{
+    display: none;
+
+  }
+  .main.on .sliderUi{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+  }
+  
+
+  .sliderUi .glass {
+    background: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, .3);
+    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); */
+    justify-content: center;
+    height: 600px;
+    padding-left: 0;
+    padding-bottom: 100px;
+    
+
+  }
+
+  .sliderUi figure img{
+    width: 262px;
+    height: 467px;
+  }
+  .colors{
+    position: absolute;
+    margin-top:  600px;
+    /* left: 0px; */
+    
+  }
+   /* MOBILE */
+   .phone{
+    
+      position: relative;
+      width: 206.5px;
+      height: 455px;
+      background: #000;
+      border-radius: 40px;
+    
+    
+    overflow: hidden;
+  
+  }
+   
+}
+
+
