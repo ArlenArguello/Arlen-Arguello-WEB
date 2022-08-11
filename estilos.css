@@ -1110,7 +1110,7 @@ footer{
 
 
 @media (max-width:600px){
-  .head{
+  .head {
     
     height: 15%;}
 
@@ -1165,10 +1165,7 @@ footer{
     font-size: 12px;
 
    }
-   .footer-content{
-    
-    
-  }
+  
   .footer-content{
     padding-top: 20px;
     padding-bottom: 20px;
