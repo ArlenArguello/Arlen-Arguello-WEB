@@ -977,7 +977,7 @@ footer{
   .about{
     grid-template-columns: 1fr;
     grid-template-rows: 2fr ;
-    height: 50vh;
+    height: 100vh;
   
 
 
