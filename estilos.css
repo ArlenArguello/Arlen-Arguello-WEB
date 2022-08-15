@@ -586,15 +586,14 @@ footer{
 .mobile{
   width: 320px;
   height: 720px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr ;
+   align-items: center;
+  justify-items: center; 
 }
 .mobile a{
-  padding: 10px 60px;
-  position: absolute;
-  bottom: -70px;
-  left: 90px ;
+  grid-column: 2;
+  padding: 10px 10px;
   color: #000;
   font-size: 18px;
   text-transform: uppercase;
@@ -613,6 +612,8 @@ footer{
 
 
 .phone{
+
+  grid-row: 1;
   position: relative;
   width: 308px;
   height: 650px;
@@ -794,18 +795,40 @@ footer{
   
    /* MOBILE */
 
+   .mobile-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+  }
+  .mobile{
+    width: 312px;
+    height: 560px;
+   
+  }
+  .mobile a{
+   font-size: 14px;
+  }
+
    .phone{
     
       position: relative;
-      width: 206.5px;
-      height: 455px;
-      background: #000;
+      width: 290px;
+      height: 500px;
       border-radius: 40px;
     
     
     overflow: hidden;
   
   }
+  .iframe{
+    width:293px; 
+    height:455px;
+  }
+
+   
    
 }
 
@@ -921,28 +944,27 @@ footer{
   
    /* MOBILE */
    .mobile-section{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4;
     align-items: center;
-    /* justify-content: space-around; */
+    justify-items: center;
+    gap: 25px;
   }
   .mobile{
-    width: 220px;
-    height: 500px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    width: 312px;
+    height: 520px;
+   
   }
   .mobile a{
-    display: none;
+   font-size: 14px;
   }
 
    .phone{
     
       position: relative;
-      width: 210px;
-      height: 455px;
-      background: #000;
+      width: 270px;
+      height: 465px;
       border-radius: 40px;
     
     
@@ -950,52 +972,10 @@ footer{
   
   }
   .iframe{
-    width:210px; 
+    width:271px; 
     height:455px;
   }
-   /* .screen:first-child{
-    animation: screen1 15s infinite ease-in-out; 
-  
-  }
-  @keyframes screen1 {
-    25%{
-      transform: translateX(1%);
-    }
-    
-    
-    
-  }
-  
-  .screen:nth-child(2){
-    animation: screen2 20s infinite ease-in-out; 
-  
-  }
-  @keyframes screen2 {
-    50%{
-      transform: translateX(140%);
-    }
-    
-    75%{
-      transform: translateX(-1%);
-      
-    }
-    
-  }
-  .screen:nth-child(3){
-    animation: screen3 20s infinite ease-in-out; 
-  
-  }
-  @keyframes screen3 {
-    75%{
-      transform: translateX(280%);
-    }
-    100%{
-      transform: translateX(-1%);
-      
-    }
-    
-    
-  } */
+   
 }
 
 
